@@ -1,0 +1,36 @@
+.wrapperForThisBullshitCrap {
+  overflow: auto;
+  max-height: 100vh;
+  border-radius: 15px 65px 0px 35px;
+  width: 33%;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.headerEmptyness {
+  cursor: pointer;
+  background-color: #0089cc;
+  padding: 15px;
+  color: #fff;
+  font-family: verdana;
+}
+
+.headerNonEmpty {
+  border-radius: 15px 0px 0px 0px;
+  margin-top: 7vh;
+  background-color: #f1a23b;
+  /* ta alla idia me to empty*/
+  cursor: pointer;
+  padding: 15px;
+  color: #fff;
+  font-family: verdana;
+}
+
+.content {
+  background-color: hsl(62, 60%, 75%);
+  padding: 15px;
+  font-family: verdana;
+  font-size: 14px;
+}

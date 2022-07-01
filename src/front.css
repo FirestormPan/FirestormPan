@@ -1,0 +1,55 @@
+.front {
+  /*gia na mhn epikaleiptontai τα φροντιστηρια(οταν μικραινω την οθονη) afairesai to link eisagwghs bootstrap*/
+  /*
+    background: url(klematis.jpg);
+    padding: var(--padding);
+  */
+  margin-top: 35px;
+  height: 275px;
+  max-width: 460px;
+  min-width: 30px;
+  padding: 16px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: solid black;
+}
+
+.front::after {
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+h3 {
+  font-family: "EB Garamond", serif;
+}
+
+/* το κουμπι σταφροντ*/
+.pageButton{
+  color: #fff;
+  background-color: #007BFF;
+  display:inline-block;
+  text-decoration: none;
+  border: 3px solid #3c67e3;
+  border-radius: 10px;
+  
+}
+
+.pageButton:hover{
+  animation:pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate{
+  0%{
+    box-shadow:
+    0 0 25px #5ddcff,
+    0 0 50px #1b0936;
+
+  }
+}

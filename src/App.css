@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Liu+Jian+Mao+Cao&family=Satisfy&display=swap");
+
+.App {
+  text-align: center;
+}
+
+body {
+  background: url("astronomy.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  color: rgb(184, 27, 184);
+  font-family: "EB Garamond", serif;
+  padding-bottom: 52px;
+}
+
+h4 {
+  color: rgb(27, 184, 132);
+}
+
+/*
+style={ ( { backgroundImage: `url(${props.imagePath})`  }  ) }
+*/
