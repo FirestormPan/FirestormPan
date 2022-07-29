@@ -56,6 +56,7 @@ class App extends Component {
     ],
     favouritesArray:  [],
   };
+  
 /*
   componentDidMount(){
     let link = "http://localhost:3000/" ;
