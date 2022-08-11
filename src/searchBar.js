@@ -57,12 +57,12 @@ class SearchBar extends Component {
 
   render() {
     const options = [
-      { value: "all", label: "All subjects" },
-      { value: "maths", label: "Maths" },
-      { value: "physics", label: "physics" },
-      { value: "geography", label: "geography" },
-      { value: "chemistry", label: "chemistry" },
-      { value: "latin", label: "latin" },
+      { value: "all", label: "All Engines" },
+      { value: "carbon", label: "Carbon" },
+      { value: "mazut", label: "Mazut" },
+      { value: "geofuel", label: "Geofuel" },
+      { value: "chemichal", label: "Chemical" },
+      { value: "lithium", label: "Lithium" },
     ];
 
     var filteredFronts = this.props.fronts.filter((ff) => {
@@ -79,11 +79,11 @@ class SearchBar extends Component {
         <br></br>
         <br></br>
         <br></br>
-        <h1>A complete catalogue of Our fronts</h1>
+        <h1>A complete catalogue of Our SpaceShips</h1>
 
         <h4>
           <i className="fas fa-search"></i>
-          {"Αναζήτηση "}
+          {"Search "}
         </h4>
 
         <form
@@ -93,7 +93,7 @@ class SearchBar extends Component {
         >
           <input
             type="text"
-            placeholder="Όνομα φροντιστηρίου"
+            placeholder="Spaceship model name"
             value={this.state.inputNameValue}
             onChange={this.frontSetOnChange}
           />
@@ -108,7 +108,7 @@ class SearchBar extends Component {
         <div  className="col-lg-4">
           <Select
             className="selctMultipleValues"
-            placeholder="Περιοχη"
+            placeholder="Region"
             options= {[
                     { value: "all", label: "All regions" },
                     { value: "kalifornia", label: "Kalifornia" },
@@ -123,9 +123,9 @@ class SearchBar extends Component {
      <div  className="col-lg-4">
           <Select
             className="selctMultipleValues"
-            placeholder="Μαθήματα"
+            placeholder="Hyperdriver power Engines"
             options={options}
-           //defaultValue={options[0]}
+          defaultValue={options[0]}
             isMulti
             onChange={this.handleSubjectsChoice}
           />
@@ -142,7 +142,6 @@ class SearchBar extends Component {
                   onFavoutited={this.props.addToFavourites}
                   isFavourited={this.props.isFavourited}
                   frontistiriou={ff}
-
                 />
               </div>
             ))}

@@ -1,0 +1,247 @@
+[1mdiff --git a/src/App.js b/src/App.js[m
+[1mindex 244172b..0e4785b 100644[m
+[1m--- a/src/App.js[m
+[1m+++ b/src/App.js[m
+[36m@@ -7,51 +7,55 @@[m [mimport Menunavbar from "./menunavbar.js";[m
+ import FavoriteFronts from "./favouriteFronts.js";[m
+ import SearchBar from "./searchBar.js";[m
+ import FrontistirioContextProvider from "./contexts/FrontistirioContext";[m
+[31m-import Testmyass from "./Testmyass.js";[m
+ //local storage hook[m
+ //import useLocalStorage from "./hooks/useLocalStorage";[m
+ import Footer from "./Footer.js";[m
+[32m+[m[32m//images[m
+[32m+[m[32mimport launching from "./images/4142115.jpg"[m
+[32m+[m[32mimport spaceship from "./images/spaceship.jpg"[m
+[32m+[m[32mimport aerorocket from "./images/aerorocket.png"[m
+[32m+[m[32mimport bluestar from "./images/bluestar.jpg"[m
+ [m
+ class App extends Component {[m
+   state = {[m
+     samplearray: [[m
+       {[m
+         id: 1,[m
+[31m-        name: "front1",[m
+[32m+[m[32m        name: "Tower Rocket",[m
+         region: "kalifornia",[m
+[31m-        subjects: ["maths", "chemistry", "physics"],[m
+[31m-        description:[m
+[31m-          "eimaste kaloi nai nai alh8ia sas lew! Exoume papies kai xrysa abga! Na kerasw mia kerasopita re mpaglama h eisai akatadextos",[m
+[32m+[m[32m        subjects: ["carbon", "mazut", "geofuel"],[m
+[32m+[m[32m        description: " You probably recognize this one from Star Warz",[m
+         link:[m
+           "https://www.youtube.com/watch?v=8okED1SIvBQ&ab_channel=InnerEarRec",[m
+[31m-        imagePath: "logokaikala.png",[m
+[32m+[m[32m        imagePath: aerorocket,[m
+       },[m
+       {[m
+         id: 2,[m
+[31m-        name: "frontistirio2",[m
+[32m+[m[32m        name: "Green Strike",[m
+         region: "moon",[m
+[31m-        subjects: ["maths", "chemistry", "physics"],[m
+[31m-        description: "eimaste kaloi nai nai alh8ia sas lew!",[m
+[32m+[m[32m        subjects: ["carbon", "geofuel", "chemichal"],[m
+[32m+[m[32m        description: "Let us travel you through the stars! Captain included",[m
+         link: "https://www.youtube.com/watch?v=8okED1SIvBQ&ab_channel=InnerEarRec",[m
+[31m-        imagePath: "logokaikala.png",[m
+[32m+[m[32m        imagePath: launching,[m
+       },[m
+       {[m
+         id: 3,[m
+[31m-        name: "frontistiriaki3",[m
+[32m+[m[32m        name: "Blue navigator",[m
+         region: "moon",[m
+[31m-        subjects: ["maths", "latin", "geography"],[m
+[31m-        description: "eimaste kaloi nai nai alh8ia sas lew!",[m
+[32m+[m[32m        subjects: ["maths", "mazut", "lithium"],[m
+[32m+[m[32m        description: "Family cruizer for long trips to faraway planets!",[m
+         link: "https://www.youtube.com/watch?v=8okED1SIvBQ&ab_channel=InnerEarRec",[m
+[31m-        imagePath: "logokaikala.png",[m
+[32m+[m[32m        imagePath: bluestar,[m
+       },[m
+       {[m
+         id: 4,[m
+[31m-        name: "front4",[m
+[32m+[m[32m        name: "Data Traveler",[m
+         region: "sirakuses",[m
+[31m-        subjects: ["maths", "chemistry", "physics"],[m
+[31m-        description: "eimaste kaloi nai nai alh8ia sas lew!",[m
+[32m+[m[32m        subjects: ["carbon", "mazut", "lithium"],[m
+[32m+[m[32m        description: "An amazing spaceship for all needs!",[m
+         link: "https://www.youtube.com/watch?v=8okED1SIvBQ&ab_channel=InnerEarRec",[m
+[31m-        imagePath: "logokaikala.png",[m
+[32m+[m[32m        imagePath: spaceship,[m
+[32m+[m[41m       [m
+       },[m
+     ],[m
+     favouritesArray:  [],[m
+[36m@@ -119,23 +123,24 @@[m [mclass App extends Component {[m
+         <br></br>[m
+         <br></br>[m
+ [m
+[31m-        <FrontistirioContextProvider>[m
+[31m-        {/* <Testmyass /> */}[m
+[32m+[m
+           <SearchBar[m
+               fronts={this.state.samplearray}[m
+               addToFavourites={this.addToFavourites}[m
+               onDelete={this.deleteFavourites}[m
+               isFavourited={this.isFavourited}[m
+             />[m
+[32m+[m[32m       <FrontistirioContextProvider>[m
+[32m+[m[32m        {/* <Testmyass /> */}[m
+         </FrontistirioContextProvider>  [m
+ [m
+         <br></br>[m
+         <p>[m
+[31m-          <cite>Για ενα Καλο ταξιδι χρειαζεται το καταληλο πλοιο</cite>[m
+[32m+[m[32m          <cite>For a good trip, a good ship is required</cite>[m
+         </p>[m
+         <br></br>[m
+[31m-        <label>Αναζητήστε το καταληλο φροντιστήριο για εσας! Βάλε τα κατάληλα φίλτρα και βρες την καλύτερη επιλογή για εσένα. Εύκολα γρήγορα [m
+[31m-          και απλά! Ενας πλήρης κατάλογος με όλους μας τους συνεργάτες. Καλή αναζήτηση![m
+[32m+[m[32m        <label>Seaarch the most suitable Spaceship for you! Filter out to find the best solution for you. Easy fast and simple![m
+[32m+[m[32m           Happy searching![m[41m [m
+         </label>[m
+ [m
+ [m
+[1mdiff --git a/src/favouriteFronts.js b/src/favouriteFronts.js[m
+[1mindex 02d43d2..b167eb8 100644[m
+[1m--- a/src/favouriteFronts.js[m
+[1m+++ b/src/favouriteFronts.js[m
+[36m@@ -24,14 +24,14 @@[m [mclass FavouriteFronts extends Component {[m
+     return ([m
+       <div className="wrapperForThisBullshitCrap">[m
+         <div onClick={this.togglePanel} className={this.titleStyle()}>[m
+[31m-          Favourited Fronts:{" "}[m
+[32m+[m[32m          Favourited Spaceships:{" "}[m
+           <span className="badge badge-pill badge-secondary">[m
+             {this.props.favouriteArray.length}[m
+           </span>[m
+         </div>[m
+         {this.state.open ? ( [m
+           <div className="content">[m
+[31m-            { !this.props.favouriteArray.length ? (<i>"to save a front as favourite, click on the star button"</i>)  : (  [m
+[32m+[m[32m            { !this.props.favouriteArray.length ? (<i>"To save a Spaceship as favourite, click on the star button"</i>)  : ([m[41m  [m
+             <ol>[m
+               {this.props.favouriteArray.map((ff) => ([m
+                 <li key={ff.id}>[m
+[1mdiff --git a/src/ffTest.js b/src/ffTest.js[m
+[1mindex 28e4eba..f2101f2 100644[m
+[1m--- a/src/ffTest.js[m
+[1m+++ b/src/ffTest.js[m
+[36m@@ -19,9 +19,9 @@[m [mclass Frontistirio extends Component {[m
+         cursor: "pointer",[m
+         textAlign: "right",[m
+       }, [m
+[31m-    },[m
+[31m-    [m
+[32m+[m[32m    },[m[41m  [m
+   };[m
+[32m+[m
+   getBadgeClasses() {[m
+     let classes = "badge m-2 badge-";[m
+     classes += this.props.isFavourited(this.props.frontistiriou.id) ? "warning" : "primary";[m
+[36m@@ -55,7 +55,9 @@[m [mclass Frontistirio extends Component {[m
+           </div>[m
+         </div>[m
+ [m
+[31m-        <p>{description}</p>[m
+[32m+[m[32m        <p>[m
+[32m+[m[32m          <b>{description}</b>[m
+[32m+[m[32m        </p>[m
+ [m
+         <a[m
+           href={link}[m
+[1mdiff --git a/src/images/4142115.jpg b/src/images/4142115.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..19fbe3e[m
+Binary files /dev/null and b/src/images/4142115.jpg differ
+[1mdiff --git a/src/images/aerorocket.png b/src/images/aerorocket.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..06b577c[m
+Binary files /dev/null and b/src/images/aerorocket.png differ
+[1mdiff --git a/src/images/bluestar.jpg b/src/images/bluestar.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..956cbdd[m
+Binary files /dev/null and b/src/images/bluestar.jpg differ
+[1mdiff --git a/src/images/spaceship.jpg b/src/images/spaceship.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d77ae38[m
+Binary files /dev/null and b/src/images/spaceship.jpg differ
+[1mdiff --git a/src/searchBar.js b/src/searchBar.js[m
+[1mindex c3cdd69..1d23c3a 100644[m
+[1m--- a/src/searchBar.js[m
+[1m+++ b/src/searchBar.js[m
+[36m@@ -57,12 +57,12 @@[m [mclass SearchBar extends Component {[m
+ [m
+   render() {[m
+     const options = [[m
+[31m-      { value: "all", label: "All subjects" },[m
+[31m-      { value: "maths", label: "Maths" },[m
+[31m-      { value: "physics", label: "physics" },[m
+[31m-      { value: "geography", label: "geography" },[m
+[31m-      { value: "chemistry", label: "chemistry" },[m
+[31m-      { value: "latin", label: "latin" },[m
+[32m+[m[32m      { value: "all", label: "All Engines" },[m
+[32m+[m[32m      { value: "carbon", label: "Carbon" },[m
+[32m+[m[32m      { value: "mazut", label: "Mazut" },[m
+[32m+[m[32m      { value: "geofuel", label: "Geofuel" },[m
+[32m+[m[32m      { value: "chemichal", label: "Chemical" },[m
+[32m+[m[32m      { value: "lithium", label: "Lithium" },[m
+     ];[m
+ [m
+     var filteredFronts = this.props.fronts.filter((ff) => {[m
+[36m@@ -79,11 +79,11 @@[m [mclass SearchBar extends Component {[m
+         <br></br>[m
+         <br></br>[m
+         <br></br>[m
+[31m-        <h1>A complete catalogue of Our fronts</h1>[m
+[32m+[m[32m        <h1>A complete catalogue of Our SpaceShips</h1>[m
+ [m
+         <h4>[m
+           <i className="fas fa-search"></i>[m
+[31m-          {"Αναζήτηση "}[m
+[32m+[m[32m          {"Search "}[m
+         </h4>[m
+ [m
+         <form[m
+[36m@@ -93,7 +93,7 @@[m [mclass SearchBar extends Component {[m
+         >[m
+           <input[m
+             type="text"[m
+[31m-            placeholder="Όνομα φροντιστηρίου"[m
+[32m+[m[32m            placeholder="Spaceship model name"[m
+             value={this.state.inputNameValue}[m
+             onChange={this.frontSetOnChange}[m
+           />[m
+[36m@@ -108,7 +108,7 @@[m [mclass SearchBar extends Component {[m
+         <div  className="col-lg-4">[m
+           <Select[m
+             className="selctMultipleValues"[m
+[31m-            placeholder="Περιοχη"[m
+[32m+[m[32m            placeholder="Region"[m
+             options= {[[m
+                     { value: "all", label: "All regions" },[m
+                     { value: "kalifornia", label: "Kalifornia" },[m
+[36m@@ -123,9 +123,9 @@[m [mclass SearchBar extends Component {[m
+      <div  className="col-lg-4">[m
+           <Select[m
+             className="selctMultipleValues"[m
+[31m-            placeholder="Μαθήματα"[m
+[32m+[m[32m            placeholder="Hyperdriver power Engines"[m
+             options={options}[m
+[31m-           //defaultValue={options[0]}[m
+[32m+[m[32m          defaultValue={options[0]}[m
+             isMulti[m
+             onChange={this.handleSubjectsChoice}[m
+           />[m
+[36m@@ -142,7 +142,6 @@[m [mclass SearchBar extends Component {[m
+                   onFavoutited={this.props.addToFavourites}[m
+                   isFavourited={this.props.isFavourited}[m
+                   frontistiriou={ff}[m
+[31m-[m
+                 />[m
+               </div>[m
+             ))}[m

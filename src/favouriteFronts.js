@@ -24,14 +24,14 @@ class FavouriteFronts extends Component {
     return (
       <div className="wrapperForThisBullshitCrap">
         <div onClick={this.togglePanel} className={this.titleStyle()}>
-          Favourited Fronts:{" "}
+          Favourited Spaceships:{" "}
           <span className="badge badge-pill badge-secondary">
             {this.props.favouriteArray.length}
           </span>
         </div>
         {this.state.open ? ( 
           <div className="content">
-            { !this.props.favouriteArray.length ? (<i>"to save a front as favourite, click on the star button"</i>)  : (  
+            { !this.props.favouriteArray.length ? (<i>"To save a Spaceship as favourite, click on the star button"</i>)  : (  
             <ol>
               {this.props.favouriteArray.map((ff) => (
                 <li key={ff.id}>

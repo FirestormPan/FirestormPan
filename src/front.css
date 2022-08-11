@@ -30,6 +30,10 @@ h3 {
   font-family: "EB Garamond", serif;
 }
 
+.coverBackgroundOnHover:hover{
+  background-color: #fff;
+}
+
 /* το κουμπι σταφροντ*/
 .pageButton{
   color: #fff;

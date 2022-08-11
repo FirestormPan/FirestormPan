@@ -19,9 +19,9 @@ class Frontistirio extends Component {
         cursor: "pointer",
         textAlign: "right",
       }, 
-    },
-    
+    },  
   };
+
   getBadgeClasses() {
     let classes = "badge m-2 badge-";
     classes += this.props.isFavourited(this.props.frontistiriou.id) ? "warning" : "primary";
@@ -55,7 +55,9 @@ class Frontistirio extends Component {
           </div>
         </div>
 
-        <p>{description}</p>
+        <p  className="coverBackgroundOnHover">
+          <b>{description}</b>
+        </p>
 
         <a
           href={link}

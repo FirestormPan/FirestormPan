@@ -7,51 +7,55 @@ import Menunavbar from "./menunavbar.js";
 import FavoriteFronts from "./favouriteFronts.js";
 import SearchBar from "./searchBar.js";
 import FrontistirioContextProvider from "./contexts/FrontistirioContext";
-import Testmyass from "./Testmyass.js";
 //local storage hook
 //import useLocalStorage from "./hooks/useLocalStorage";
 import Footer from "./Footer.js";
+//images
+import launching from "./images/4142115.jpg"
+import spaceship from "./images/spaceship.jpg"
+import aerorocket from "./images/aerorocket.png"
+import bluestar from "./images/bluestar.jpg"
 
 class App extends Component {
   state = {
     samplearray: [
       {
         id: 1,
-        name: "front1",
+        name: "Tower Rocket",
         region: "kalifornia",
-        subjects: ["maths", "chemistry", "physics"],
-        description:
-          "eimaste kaloi nai nai alh8ia sas lew! Exoume papies kai xrysa abga! Na kerasw mia kerasopita re mpaglama h eisai akatadextos",
+        subjects: ["carbon", "mazut", "geofuel"],
+        description: " You probably recognize this one from Star Warz",
         link:
           "https://www.youtube.com/watch?v=8okED1SIvBQ&ab_channel=InnerEarRec",
-        imagePath: "logokaikala.png",
+        imagePath: aerorocket,
       },
       {
         id: 2,
-        name: "frontistirio2",
+        name: "Green Strike",
         region: "moon",
-        subjects: ["maths", "chemistry", "physics"],
-        description: "eimaste kaloi nai nai alh8ia sas lew!",
+        subjects: ["carbon", "geofuel", "chemichal"],
+        description: "Let us travel you through the stars! Captain included",
         link: "https://www.youtube.com/watch?v=8okED1SIvBQ&ab_channel=InnerEarRec",
-        imagePath: "logokaikala.png",
+        imagePath: launching,
       },
       {
         id: 3,
-        name: "frontistiriaki3",
+        name: "Blue navigator",
         region: "moon",
-        subjects: ["maths", "latin", "geography"],
-        description: "eimaste kaloi nai nai alh8ia sas lew!",
+        subjects: ["maths", "mazut", "lithium"],
+        description: "Family cruizer for long trips to faraway planets!",
         link: "https://www.youtube.com/watch?v=8okED1SIvBQ&ab_channel=InnerEarRec",
-        imagePath: "logokaikala.png",
+        imagePath: bluestar,
       },
       {
         id: 4,
-        name: "front4",
+        name: "Data Traveler",
         region: "sirakuses",
-        subjects: ["maths", "chemistry", "physics"],
-        description: "eimaste kaloi nai nai alh8ia sas lew!",
+        subjects: ["carbon", "mazut", "lithium"],
+        description: "An amazing spaceship for all needs!",
         link: "https://www.youtube.com/watch?v=8okED1SIvBQ&ab_channel=InnerEarRec",
-        imagePath: "logokaikala.png",
+        imagePath: spaceship,
+       
       },
     ],
     favouritesArray:  [],
@@ -119,23 +123,24 @@ class App extends Component {
         <br></br>
         <br></br>
 
-        <FrontistirioContextProvider>
-        {/* <Testmyass /> */}
+
           <SearchBar
               fronts={this.state.samplearray}
               addToFavourites={this.addToFavourites}
               onDelete={this.deleteFavourites}
               isFavourited={this.isFavourited}
             />
+       <FrontistirioContextProvider>
+        {/* <Testmyass /> */}
         </FrontistirioContextProvider>  
 
         <br></br>
         <p>
-          <cite>Για ενα Καλο ταξιδι χρειαζεται το καταληλο πλοιο</cite>
+          <cite>For a good trip, a good ship is required</cite>
         </p>
         <br></br>
-        <label>Αναζητήστε το καταληλο φροντιστήριο για εσας! Βάλε τα κατάληλα φίλτρα και βρες την καλύτερη επιλογή για εσένα. Εύκολα γρήγορα 
-          και απλά! Ενας πλήρης κατάλογος με όλους μας τους συνεργάτες. Καλή αναζήτηση!
+        <label>Seaarch the most suitable Spaceship for you! Filter out to find the best solution for you. Easy fast and simple!
+           Happy searching! 
         </label>
 
 
