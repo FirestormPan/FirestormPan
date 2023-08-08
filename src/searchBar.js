@@ -9,8 +9,8 @@ import "./search.css";
 class SearchBar extends Component {
   state = {
     inputNameValue: "",
-    inputRegionValue: "all",
-    SubjectsValue: [],
+    inputRegionValue: '',
+    SubjectsValue: ["all"],
     sortValue: "",
   };
 
@@ -99,8 +99,9 @@ class SearchBar extends Component {
           />
           <br></br>
           <br></br>
+          {/*
           <input className="searchButton" type="submit" value="Submit" />{" "}
-          {/* διαγραφη*/}
+           διαγραφη*/}
         </form>
        
         <div className="container-fluid">

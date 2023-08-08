@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./front.css";
 
-
 class Frontistirio extends Component {
   state = {
     styling: {

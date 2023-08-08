@@ -1,20 +1,25 @@
 import React, { Component , useEffect, useState } from "react";
 import "./App.css";
 
-//import Frontistirio from "./ffTest";
-//import SearchTutorial from "./searchFromTutorial(server).js";
+//my components
 import Menunavbar from "./menunavbar.js";
 import FavoriteFronts from "./favouriteFronts.js";
 import SearchBar from "./searchBar.js";
+import Footer from "./Footer.js";
+//import Frontistirio from "./ffTest";
+//import SearchTutorial from "./searchFromTutorial(server).js";
+
+//not working
 import FrontistirioContextProvider from "./contexts/FrontistirioContext";
 //local storage hook
 //import useLocalStorage from "./hooks/useLocalStorage";
-import Footer from "./Footer.js";
+
 //images
 import launching from "./images/4142115.jpg"
 import spaceship from "./images/spaceship.jpg"
 import aerorocket from "./images/aerorocket.png"
 import bluestar from "./images/bluestar.jpg"
+import skyguard_ship from "./images/skyguard_ship.jpg"
 
 class App extends Component {
   state = {
@@ -53,8 +58,18 @@ class App extends Component {
         region: "sirakuses",
         subjects: ["carbon", "mazut", "lithium"],
         description: "An amazing spaceship for all needs!",
-        link: "https://www.youtube.com/watch?v=8okED1SIvBQ&ab_channel=InnerEarRec",
+        link: "https://www.youtube.com/watch?v=K9IYp-2vP9U&ab_channel=Bcskoutalou",
         imagePath: spaceship,
+       
+      },
+      {
+        id: 5,
+        name: "Sky Guard Traveler Cruiser",
+        region: "moon",
+        subjects: ["carbon"],
+        description: "An old school spaceship from AQW skyguards!",
+        link: "http://aqwwiki.wikidot.com/skyguard-cruiser",
+        imagePath: skyguard_ship,
        
       },
     ],
