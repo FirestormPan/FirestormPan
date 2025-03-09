@@ -1,5 +1,5 @@
 # A React Searchbar
-You can search through "Spaceships" with filters of text(name) and/or by traits(engine, location). There is a "star" button that allows the user to save "Spaceships" in a different component.
+You can search through "Spaceships" with filters of text(name) and/or by traits(engine, location). The filtering is done locally (front end), by javascript functions.  On each "spaceship" component exists a "star" button that allows the user to "save Spaceships" in a different component, so you can search under different criteria again. Responsive design.
 
 # To Run it
 After downloading the files, run npm install.
